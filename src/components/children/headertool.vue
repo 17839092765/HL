@@ -3,8 +3,8 @@
     <div class="one" @click="resetCamera">
       <img src="../../assets/img/icon-初始视角.svg" alt="" />
     </div>
-    <div  @click="shuaxin" class="two">
-      <img  src="../../assets/img/icon-取消高亮.svg" alt="" />
+    <div @click="shuaxin" class="two">
+      <img src="../../assets/img/icon-取消高亮.svg" alt="" />
     </div>
     <div class="three" @click="setUp">
       <el-popover
@@ -52,8 +52,8 @@ export default {
   computed: {},
   watch: {},
   methods: {
-    shuaxin(){
-      location.reload()
+    shuaxin() {
+      location.reload();
     },
     gettime() {
       this.timer = setInterval(() => {
@@ -62,20 +62,20 @@ export default {
     },
     resetCamera() {
       __g.camera.lookAt(
-          510190.2778,
-          2494828.118,
-          5500.464294,
-          -33.209282,
-          -90,
-          -90,
-          () => {
-            // this.isshowBack = false
-          }
-        );
+        510190.2778,
+        2494828.118,
+        5500.464294,
+        -33.209282,
+        -90,
+        -90,
+        () => {
+          // this.isshowBack = false
+        }
+      );
     },
     setUp() {},
     showUI() {
-     // visible:false,
+      // visible:false,
       __g.misc.setMainUIVisibility(this.isShowUI);
     },
   },

@@ -111,6 +111,8 @@ export default {
             var name_jjone = data.ObjectID.slice(0, 5);
             console.log(name_jjone);
             if (name_jjone == "JJ100") {
+              __g.tileLayer.stopHighlightActor();
+
               //京基100楼层信息
               that.requestdata("楼层信息", data.Id);
               click_EVT_jj100(data, data.Type, this.lastID);

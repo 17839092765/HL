@@ -133,15 +133,16 @@ export default {
     align-items: center;
     // font-family: YouSheBiaoTiHei;
     // color: #ffffff;
-    background: rgba(0, 0, 0, 0.24);
+    background: rgba(0, 0, 0, 0.8);
+
     // .box {
     //   width: 100%;
     //   height: 100%;
     //   background: url("../../assets/img/public/logo.png") no-repeat center;
     //   background-size: 100%  !important;
     // }
-    >img {
-      width: 80%  !important;
+    > img {
+      width: 80% !important;
       // height: 100%;
     }
   }
@@ -153,7 +154,7 @@ export default {
     align-items: center;
     color: #ffffff;
     font-size: 18px;
-    background: rgba(0, 0, 0, 0.24);
+    background: rgba(0, 0, 0, 0.8);
     z-index: 1000;
 
     > div {
@@ -207,7 +208,7 @@ export default {
   }
   .tool {
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.24);
+    background: rgba(0, 0, 0, 0.8);
 
     width: 30%;
     height: 100%;
