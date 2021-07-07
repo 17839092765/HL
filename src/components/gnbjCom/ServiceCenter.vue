@@ -62,14 +62,8 @@ export default {
       __g.infoTree.hide("935F37B34E82DF36A7D769AB444D7E64");
       __g.tag.delete(["tagxinying", "tagguoji", "tagxiandai"]);
     }
-    __g.camera.lookAt(
-      511173.375,
-      2494655.75,
-      1052.895142,
-      -40.828144,
-      0,
-      143.61351
-    );
+  __g.camera.set(511393.1875, 2494944.25, 810.398315, -19.746376, 145.677032, 1);
+
     /**
      * <a href="https://imgtu.com/i/cYkLGV"><img src="https://z3.ax1x.com/2021/04/08/cYkLGV.png" alt="cYkLGV.png" border="0"></a>
 <a href="https://imgtu.com/i/cYkqP0"><img src="https://z3.ax1x.com/2021/04/08/cYkqP0.png" alt="cYkqP0.png" border="0"></a>

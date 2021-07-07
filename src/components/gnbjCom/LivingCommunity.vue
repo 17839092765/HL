@@ -171,14 +171,7 @@ export default {
   },
   mounted() {
     if (__g) {
-      __g.camera.lookAt(
-        511215.625,
-        2495136.25,
-        697.342468,
-        -42.378929,
-        0,
-        -167.668533
-      );
+     __g.camera.set(511268.5625, 2495073.75, 465.111633, -21.234982, -166.999924, 1);
       __g.infoTree.hide("935F37B34E82DF36A7D769AB444D7E64");
       __g.tag.delete(["tagxinying", "tagguoji", "tagxiandai"], () => {
         setTimeout(() => {
