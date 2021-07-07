@@ -14,13 +14,13 @@
 <script>
 import * as echarts from "echarts";
 export default {
-  data () {
+  data() {
     return {};
   },
   computed: {},
   watch: {},
   methods: {
-    showChart () {
+    showChart() {
       var dom = this.$refs.echart;
       var myChart = echarts.init(dom);
       var app = {};
@@ -60,7 +60,9 @@ export default {
           axisPointer: {
             type: "shadow",
           },
+          confine: true,
         },
+
         legend: {
           data: [
             "商业服务业用地",
@@ -315,17 +317,17 @@ export default {
       }
     },
   },
-  created () { },
-  mounted () {
+  created() {},
+  mounted() {
     this.showChart();
   },
-  beforeCreate () { },
-  beforeMount () { },
-  beforeUpdate () { },
-  updated () { },
-  beforeDestroy () { },
-  destroyed () { },
-  activated () { },
+  beforeCreate() {},
+  beforeMount() {},
+  beforeUpdate() {},
+  updated() {},
+  beforeDestroy() {},
+  destroyed() {},
+  activated() {},
   components: {},
 };
 </script>
@@ -341,11 +343,11 @@ export default {
   width: 350px;
   height: 603px;
   background: rgba(69, 77, 72, 0.5);
-    // linear-gradient(
-    //   227deg,
-    //   rgba(16, 25, 36, 0.4) 0%,
-    //   rgba(35, 47, 48, 0.7) 100%
-    // );
+  // linear-gradient(
+  //   227deg,
+  //   rgba(16, 25, 36, 0.4) 0%,
+  //   rgba(35, 47, 48, 0.7) 100%
+  // );
   flex-direction: column;
   display: flex;
   > .landlayout_title {

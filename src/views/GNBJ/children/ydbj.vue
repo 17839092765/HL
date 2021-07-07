@@ -30,6 +30,7 @@ export default {
       tulidata: [
         {
           title: "商业类",
+
           case: [
             {
               color: "#E1B0B9",
@@ -151,6 +152,7 @@ export default {
   right: 10px;
   top: 150px;
   .tulicase {
+    overflow: hidden;
     .tittop {
       float: left;
       width: 20px;
