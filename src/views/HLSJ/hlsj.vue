@@ -42,7 +42,7 @@ export default {
     return {
       CameraLookstyle: 0,
       // path: "http://192.168.5.49:9080/img/biaoji.png",
-      path: "127.0.0.1:8080/img/1红岭实景/",
+      path: "127.0.0.1:8088/img/1红岭实景/",
       path1: "E:\\Freedo\\红岭\\HL_4.23\\src\\assets\\img\\1红岭实景\\",
       flag: false,
       tagIds: [],
@@ -1231,8 +1231,11 @@ export default {
     }
   },
   mounted() {
-    showtuceng(this.$treedata.hlsjdata);
+    setTimeout(() => {
+      
+      showtuceng(this.$treedata.hlsjdata);
     this.polyline_add();
+    }, 200);
     // this.addtag();
     // this.addCameraTour();
   },
