@@ -240,7 +240,7 @@ async function showVectorlayers(data) {
   } else if (database == "现状权属") {
     // res = await geoserverruest.xzqsquery()
     res = await geoserverruest.shownewxzqsdata();
-
+    console.log(res, "现状权属");
     data1 = res.data.features;
     idd = "xzqsxx";
     // debugger
@@ -296,6 +296,14 @@ async function showVectorlayers(data) {
         for (let c = 0; c < color1.length; c++) {
           color1[c] = Number(color1[c] / 255);
         }
+        if (ele.properties.yongtu === "已发证") {
+          color1 = [1, 0, 0];
+        } else if (ele.properties.yongtu === "备案") {
+          color1 = [0, 0.1, 1];
+        } else if (ele.properties.yongtu === "军产用地") {
+          color1 = [0, 1, 1];
+        }
+        console.log(color1);
       }
 
       color = color1;

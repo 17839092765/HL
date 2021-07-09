@@ -633,6 +633,7 @@ export default {
 }
 .top_data {
   margin-top: 5%;
-  color: red;
+  color: rgb(0, 255, 255);
+  color: rgb(255, 0, 0);
 }
 </style>

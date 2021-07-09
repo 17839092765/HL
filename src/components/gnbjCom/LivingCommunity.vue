@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       // path: 'E:\\yqd\\code\\HL_4.23\\src\\assets\\img\\2功能布局\\2\\',
-      path: "127.0.0.1:8088/img/2功能布局/2/",
+      path: "127.0.0.1:8080/img/2功能布局/2/",
       arr: [],
     };
   },
@@ -171,7 +171,14 @@ export default {
   },
   mounted() {
     if (__g) {
-     __g.camera.set(511268.5625, 2495073.75, 465.111633, -21.234982, -166.999924, 1);
+      __g.camera.set(
+        511268.5625,
+        2495073.75,
+        465.111633,
+        -21.234982,
+        -166.999924,
+        1
+      );
       __g.infoTree.hide("935F37B34E82DF36A7D769AB444D7E64");
       __g.tag.delete(["tagxinying", "tagguoji", "tagxiandai"], () => {
         setTimeout(() => {

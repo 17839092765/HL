@@ -153,7 +153,14 @@ export default {
     },
     onReady() {
       //此时可以调用接口了
-      __g.camera.set(509785.625, 2493510.25, 1005.481873, -36.999996, -39.999985,2);
+      __g.camera.set(
+        509785.625,
+        2493510.25,
+        1005.481873,
+        -36.999996,
+        -39.999985,
+        2
+      );
     },
     log() {},
     initWebSocket() {
@@ -217,7 +224,7 @@ export default {
                   `Camera: ${r.x}, ${r.y}, ${r.z}, ${r.pitch}, ${r.yaw}`
                 );
               });
-              this.onReady()
+              this.onReady();
             },
             onEvent: (e) => {
               this.onEvent(e);
@@ -231,6 +238,7 @@ export default {
     init(withPlayer, withInterface) {
       let _this = this;
       _this.getMatchServerConfig(HostConfig.MatchServer, function(o) {
+        console.log(o);
         if (o.result == 0) {
           HostConfig.instanceId = o.instanceId;
           _this.initInterface(withPlayer, withInterface);
@@ -315,11 +323,11 @@ export default {
     // this.player = new AirCityPlayer(instanceId, "player")
     window.addEventListener("load", this.onLoad, true);
     window.addEventListener("resize", this.onResize, true);
-    window.addEventListener("beforeunload",()=>{
-      if(window.__g){
-          //  __g.reset();
+    window.addEventListener("beforeunload", () => {
+      if (window.__g) {
+        //  __g.reset();
       }
-      })
+    });
   },
   beforeCreate() {},
   beforeMount() {},
