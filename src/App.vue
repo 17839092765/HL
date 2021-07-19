@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div id="player"></div>
+    <div id="player">
+      <Bottom11></Bottom11>
+    </div>
     <router-view />
   </div>
 </template>
@@ -10,6 +12,7 @@ import { mapState } from "vuex";
 import { addhighlight } from "./util/children/addhighlight";
 import { click_EVT_building, click_EVT_jj100 } from "./util/clickEvt";
 import connector from "./api/common";
+import Bottom11 from "./components/bottom11.vue";
 export default {
   data() {
     return {
@@ -175,7 +178,7 @@ export default {
         let __fn = fn;
 
         var ws = new WebSocket(url);
-        ws.onopen = function() {
+        ws.onopen = function () {
           this.send(
             JSON.stringify({
               command: 6,
@@ -183,12 +186,12 @@ export default {
             })
           );
         };
-        ws.onmessage = function(event) {
+        ws.onmessage = function (event) {
           var o = JSON.parse(event.data);
           __fn(o);
         };
-        ws.onclose = function() {};
-        ws.onerror = function(event) {};
+        ws.onclose = function () {};
+        ws.onerror = function (event) {};
       } else {
         this.log("Not Support WebSocket!");
       }
@@ -237,7 +240,7 @@ export default {
     },
     init(withPlayer, withInterface) {
       let _this = this;
-      _this.getMatchServerConfig(HostConfig.MatchServer, function(o) {
+      _this.getMatchServerConfig(HostConfig.MatchServer, function (o) {
         console.log(o);
         if (o.result == 0) {
           HostConfig.instanceId = o.instanceId;
@@ -284,7 +287,7 @@ export default {
     // this.initWebSocket();
   },
   mounted() {
-    var os = (function() {
+    var os = (function () {
       var ua = navigator.userAgent,
         isWindowsPhone = /(?:Windows Phone)/.test(ua),
         isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
@@ -339,7 +342,7 @@ export default {
     // this.player.destroy();
   },
   activated() {},
-  components: {},
+  components: { Bottom11 },
 };
 </script>
 

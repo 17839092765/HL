@@ -11,6 +11,7 @@ export default new Vuex.Store({
     allpolygon: [],
     clickData: {},
     dataCaseisShow: false,
+    dataCaseisShow1: false,
     // 点击的楼宇高亮信息 用来关闭高亮
     hightbuilding: {},
     // os图则多边形的信息
@@ -40,6 +41,9 @@ export default new Vuex.Store({
     //tuze内容
     dataCaseisShow(state, boolen) {
       state.dataCaseisShow = boolen;
+    },
+    dataCaseisShow1(state, boolen) {
+      state.dataCaseisShow1 = boolen;
     },
     // 高亮的楼宇楼层id信息
     hightbuilding(state, Object) {

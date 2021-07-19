@@ -1,7 +1,14 @@
 var HostConfig = {
-  "MatchServer": "192.168.5.11:82",
-  "AirCityPlayer": "192.168.5.11:8083",
-  "AirCityAPI": "192.168.5.11:4323",
+  "MatchServer": "192.168.5.111:83",
+  "AirCityPlayer": "192.168.5.111:8082",
+  "AirCityAPI": "192.168.5.111:4323",
   "Token": "",
-  "Path": "C:\\Users\\张祥\\AppData\\Roaming\\AirCityCloud\\SDK"
+  "Path": "D:\\AirCityCloud\\SDK"
 }
+// var HostConfig = {
+//     "MatchServer": "192.168.5.83:94",
+//     "AirCityPlayer": "192.168.5.83:8081",
+//     "AirCityAPI": "192.168.5.83:4323",
+//     "Token": "",
+//     "Path": "D:\\hgmcloud\\SDK"
+// }

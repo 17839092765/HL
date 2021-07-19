@@ -3,10 +3,10 @@
     <div class="one" @click="resetCamera">
       <img src="../../assets/img/icon-初始视角.svg" alt="" />
     </div>
-    <div @click="shuaxin" class="two">
+    <div @click="shuaxin" :class="{ two: isA, two1: isB }">
       <img src="../../assets/img/icon-取消高亮.svg" alt="" />
     </div>
-    <div class="three" @click="setUp">
+    <div class="three" @click="setUp" :class="{ setUp: isA, two1: isB }">
       <el-popover
         popper-class="popper"
         placement="bottom"
@@ -42,18 +42,26 @@
 
 <script>
 import dayjs from "dayjs";
+import store from "../../store";
 export default {
   data() {
     return {
       isShowUI: false,
+      show: false,
       time: "00:00",
+      isA: true,
+      isB: false,
     };
   },
   computed: {},
   watch: {},
   methods: {
     shuaxin() {
-      location.reload();
+      this.isA = !this.isA;
+      this.isB = !this.isB;
+      this.show = !this.show;
+      store.commit("dataCaseisShow1", this.show);
+      console.log(this.isA);
     },
     gettime() {
       this.timer = setInterval(() => {
@@ -75,6 +83,8 @@ export default {
     },
     setUp() {},
     showUI() {
+      this.isA = !this.isA;
+      this.isB = !this.isB;
       // visible:false,
       __g.misc.setMainUIVisibility(this.isShowUI);
     },
@@ -185,4 +195,7 @@ export default {
   //   margin-right: 20px;
   // }
 }
+// .two1 {
+//   background-color: #fee36d;
+// }
 </style>
